@@ -1,24 +1,15 @@
-import java.util.ArrayList;
-
 public class Main {
 
     public static void main(String[] args) {
-	// birbirine benzeyen operasyonları tip güvenlikli olarak aynı formatta yazmamızı sağlar genericler
+	/*
+	        repository design pattern
 
-        /*
-        ArrayList<String> sehirler=new ArrayList<>();
-        sehirler.add("Ankara");
-        sehirler.add("İstanbul");
-        sehirler.add(2); // incompatible type uyumsuz tip çünkü tip güvenlikli hale getirdik
-        */
-
-        // listeler olmasaydı genericler olmasaydı dizilerle naısl yapardık
-        // temel olarak bir sınıf ve o sınıfa ait methodlara parametre gönderiyoruz bu şekilde düşün
-
-        MyList<Product> list=new MyList<Product>();
-        list.add(new Product());
-        list.add(new Product());
-
-
+	        repository veritabanı işlemlerinin bir merkezden yapılmasını sağlar
+	        bu şekilde sorgu ve kod tekrarı önlenir iş katmanında sorgular tek tek yazılmaz
+	        asıl işi yapan bölümler ile veriye erişen bölümlerin birbirinden soyutlanmasını sağlar
+	        veri katmanı ve iş katmanı arasında görev alır	 */
+        Validator validator=new Validator();
+        Customer customer=new Customer();
+        validator.validate(customer);
     }
 }
